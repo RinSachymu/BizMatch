@@ -1,1 +1,1 @@
-{ "builds": [ { "src": "app/frontend/package.json", "use": "@vercel/static-build" } ] }
+{ "version": 2 }
