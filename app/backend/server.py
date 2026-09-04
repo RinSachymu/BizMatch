@@ -643,4 +643,7 @@ app.add_middleware(
     allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
     allow_methods=["*"],
     allow_headers=["*"],
+
+    count = await db.users.count_documents({"email": {"$regex": "^(biz|inv)\\d+@bizmatch.com$"}})
+    if count > 0:
 )
